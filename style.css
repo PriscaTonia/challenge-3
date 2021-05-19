@@ -3,23 +3,86 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    font-size: 18px;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: hsl(227, 10%, 46%);
+}
+/* styling the main body of the page */
 main{
-    min-height: 100vh;
+    min-height: 70vh;
+    max-width: 100%;
     background-color:  hsl(185, 75%, 39%) ;
     background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
-    background-position:top -100% left -7%, bottom -100% right -7% ;
+    background-position:top -70% left 7%, bottom -180% right 7% ;
     background-repeat: no-repeat;
-    background-size: 500px;
+    background-size: 500px, 550px;  
+    padding: 90px 0px;
 }
 
-
-
-
-
+/* card section */
+section{
+    width: 30vw;
+    min-height:70vh ;
+    display: grid;
+    grid-template-rows: 40% 60%;
+    border-radius: 8px;
+    margin: auto;
+}
+section .plain{
+    border-radius: 8px 8px 0px 0px;
+    background-image: url(images/bg-pattern-card.svg);
+}
+section .content{
+    border-radius: 0px 0px 8px 8px;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: white;
+}
+section .content p{
+    padding-bottom: 10px;
+}
+.main-stats{
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top: 1px solid hsl(0, 0%, 59%);
+}
+.main-stats p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.main-stats p span, h4{
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 20px 0px 10px 0px;
+    color: hsl(0, 0%, 0%, 0.8);
+}
+h4 span{
+    font-weight: 400;
+    color: hsl(227, 10%, 46%);
+}
+.img-cont{
+    margin-top: -50px;
+   
+}
+.img-cont img{
+    border-radius:50%;
+}
 
 @media screen and (min-width: 375px) and (max-width: 700px){
     main{
+        padding: 90px 25px 90px 25px;
         background-size: 300px;
         background-position:top -50px left -100px, bottom -100px right -100px;
+    }
+    section{
+        margin: 0 ;
+        width: 50%;
+        min-height: 70vh;
     }
 }
